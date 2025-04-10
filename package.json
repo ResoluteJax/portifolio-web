@@ -16,7 +16,7 @@
     "react-router-dom": "^7.5.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://resolutejax.github.io/portifolio-web/"
+    "homepage": "https://github.com/ResoluteJax/portifolio-web.git"
   },
   "scripts": {
   "start": "react-scripts start",
