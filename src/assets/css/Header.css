@@ -1,0 +1,27 @@
+/* src/assets/css/Header.css */
+.main-header {
+    background-color: #282c34; /* Cor escura de exemplo */
+    padding: 15px 30px;
+    color: white;
+    display: flex; /* Usa flexbox para alinhar itens */
+    justify-content: space-between; /* Espaça o logo/nome da navegação */
+    align-items: center; /* Alinha verticalmente */
+    border-bottom: 1px solid #444; /* Linha sutil na base */
+  }
+  
+  .logo-container h1 {
+    margin: 0; /* Remove margem padrão do h1 */
+    font-size: 1.8em;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Espaçamento entre os links */
+    font-size: 1.1em;
+  }
+  
+  /* Efeito simples ao passar o mouse (hover) */
+  .main-nav a:hover {
+    color: #61dafb; /* Cor azul React de exemplo */
+  }
