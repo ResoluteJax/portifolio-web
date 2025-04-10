@@ -1,0 +1,38 @@
+.main-footer{
+    background-color: #282c34;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    
+    border-top: 1px sold #444;
+}
+
+.main-footer p{
+    margin: 5px 0; /* pequeno espaçamento entre os parágrafos */
+}
+
+.footer-link{
+    color: #61dafb; /* cor destaque para o link */
+    text-decoration: none;
+    transition: color 0.5s ease;
+
+    /* Alinhar icones e texto */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* espaçamento entre o ícone e o texto */
+}
+
+.footer-links{
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espaçamento entre os links */
+   
+}
+
+.footer-link:hover{
+    color: #21a1f1; /* cor ao passar o mouse */
+    
+}
+

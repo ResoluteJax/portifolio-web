@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import Header from './components/Header/Header'; // Importa o componente Header
-import './assets/css/App.css'; // Pode estar vazio ou ter estilos para o App geral
+import Footer from './components/Footer/Footer'; // Importa o componente Footer
+import './assets/css/App.css';
 
 
 function App() {
@@ -45,13 +46,9 @@ const scrollToSection = (ref) => {
       {/* <div ref={projectsRef} id="projects"><Projects /></div> */}
       {/* <div ref={contactRef} id="contact"><Contact /></div> */}
     </main>
-
-    {/* <Footer /> */}
+    <Footer /> {/* Adiciona o Footer */}
   </div>
   );
-
-
-
 }
 
 export default App;

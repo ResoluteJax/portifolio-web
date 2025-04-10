@@ -1,27 +1,111 @@
 /* src/assets/css/Header.css */
+
+/* --- Estilos Base (Desktop) --- */
 .main-header {
-    background-color: #282c34; /* Cor escura de exemplo */
-    padding: 15px 30px;
-    color: white;
-    display: flex; /* Usa flexbox para alinhar itens */
-    justify-content: space-between; /* Espaça o logo/nome da navegação */
-    align-items: center; /* Alinha verticalmente */
-    border-bottom: 1px solid #444; /* Linha sutil na base */
-  }
+  background-color: #282c34;
   
+  padding: 15px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  position: relative; /* Necessário para posicionar o menu mobile absoluto */
+  z-index: 100; /* Garante que o header fique acima de outros conteúdos */
+
+  position: sticky; /* Fixa o header no topo da página */
+  top: 0; /* Fixa no topo */
+  width: 100%;
+  z-index: 100;
+}
+
+.logo-container h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Estilos padrão da navegação desktop */
+.main-nav {
+  display: flex; /* Visível no desktop */
+  gap: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 5px 0; /* Adiciona um pouco de área clicável */
+}
+
+.main-nav a:hover {
+  color: #61dafb;
+}
+
+/* --- Estilos do Botão de Toggle --- */
+.menu-toggle {
+  display: none; /* Escondido no desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8em; /* Tamanho do ícone */
+  cursor: pointer;
+  padding: 5px;
+  z-index: 110; /* Acima do header e do menu */
+}
+
+/* --- Responsividade (<= 600px) --- */
+@media (max-width: 600px) {
+  .main-header {
+    padding: 15px;
+  }
+
   .logo-container h1 {
-    margin: 0; /* Remove margem padrão do h1 */
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
-  
+
+  /* Mostra o botão de toggle */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Estiliza o menu mobile (escondido por padrão) */
+  .main-nav {
+    display: flex; /* Usa flex para alinhar itens dentro */
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center; /* Centraliza links horizontalmente no menu */
+    gap: 0; /* Remove o gap do desktop */
+
+    position: absolute; /* Posicionamento absoluto relativo ao header */
+    top: 100%; /* Começa logo abaixo do header */
+    right: 0; /* Alinhado à direita */
+    width: 100%; /* Largura total */
+    background-color: #282c34; /* Mesmo fundo do header */
+    padding: 15px 0; /* Espaçamento interno */
+
+    /* Animação e estado inicial (escondido) */
+    transform: translateY(-150%); /* Começa totalmente fora da tela (acima) */
+    /* Ou use translateX(100%) para vir da direita */
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden; /* Escondido para acessibilidade */
+    border-top: 1px solid #444; /* Linha separadora opcional */
+  }
+
+  /* Estilo dos links dentro do menu mobile */
   .main-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px; /* Espaçamento entre os links */
-    font-size: 1.1em;
+    padding: 15px 0; /* Mais área de clique */
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center; /* Centraliza o texto */
+    border-bottom: 1px solid #444; /* Linha entre os links */
+    font-size: 1.2em; /* Fonte um pouco maior */
   }
-  
-  /* Efeito simples ao passar o mouse (hover) */
-  .main-nav a:hover {
-    color: #61dafb; /* Cor azul React de exemplo */
+
+  .main-nav a:last-child {
+    border-bottom: none; /* Remove a borda do último link */
   }
+
+  /* Estilo para quando o menu está aberto */
+  .main-nav.mobile-open {
+    transform: translateY(0); /* Traz o menu para a posição visível */
+    visibility: visible;
+  }
+}
