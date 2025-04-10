@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+
 
 # misc
 .DS_Store
@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 node_modules
-build
+
 .env
 .DS_Store
 package-lock.json
