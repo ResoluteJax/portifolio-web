@@ -23,17 +23,7 @@ const Footer = () => {
                 </a>
             </p>
 
-            <p>
-                 <a 
-                    href="https://www.linkedin.com/in/otavio-henrique-filgueiras-dos-santos-2746a120a/"
-                    target='_blank'
-                    rel='noopener noreferrer' //Boa prática de segurança
-                    className='footer-link'
-                    >
-                    <FaLinkedin className='footer-icon' />
-                    LinkedIn
-                </a>
-            </p>
+            
         </div>
         </footer>
     );

@@ -1,6 +1,5 @@
 /* src/assets/css/Header.css */
 
-/* --- Estilos Base (Desktop) --- */
 .main-header {
   background-color: #282c34;
   
@@ -19,9 +18,62 @@
   z-index: 100;
 }
 
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espaçamento entre logo e título */
+}
+
+/* Container para H1 e Subtítulo/Ícones */
+.title-subtitle-container {
+  display: flex;
+  flex-direction: column; /* Empilha o título e o subtítulo */
+}
+
+
+/* Adicição de regras para a imagem */
+.profile-pic{
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover; /* Corta a imagem para preencher o espaço */
+  
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Sombra para dar profundidade */
+}
+
+
 .logo-container h1 {
   margin: 0;
   font-size: 1.8em;
+  line-height: 1.2; /* Melhora a legibilidade */
+  color: white;
+}
+
+/* Linha com "Desenvolvedor Jr..." e Ícones */
+.subtitle-line{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 2px;
+}
+
+.subtitle-line span {
+  /* O texto herda a cor e tamanho do .subtitle-line */
+  line-height: 1; /* Garante alinhamento com ícones */
+}
+
+/* Estilo específico para os links dos ícones sociais no subtítulo */
+.social-icon {
+  color: #ccc; /* Cor inicial do ícone */
+  font-size: 1.1em; /* Tamanho do ícone */
+  display: inline-flex; /* Ajuda no alinhamento */
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #61dafb; /* Cor no hover */
 }
 
 /* Estilos padrão da navegação desktop */
@@ -56,11 +108,29 @@
 /* --- Responsividade (<= 600px) --- */
 @media (max-width: 600px) {
   .main-header {
-    padding: 15px;
+    padding: 10px 15px;
   }
 
+.profile-pic{
+  width: 40px; /* Reduz a largura da imagem no mobile */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* Sombra reduzida */
+}
+
+.logo-container{
+  gap: 10px; /* Espaçamento reduzido entre logo e título */
+}
+
   .logo-container h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+
+  .subtitle-line {
+    font-size: 0.75em; /* Reduz subtítulo/ícones */
+    gap: 6px; /* Reduz espaçamento dos ícones */
+  }
+
+  .social-icon-link {
+    font-size: 1em; /* Reduz tamanho do ícone */
   }
 
   /* Mostra o botão de toggle */

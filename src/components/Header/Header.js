@@ -1,9 +1,11 @@
-import React, { useState } from 'react'; // 1. Importa useState
-import { FaBars, FaTimes } from 'react-icons/fa'; // 2. Importa ícones
+import React, { useState } from 'react'; // Importa useState
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'; //  Importa ícones
 import '../../assets/css/Header.css';
+import  profilePic  from "../../assets/images/profile.jpg"; // Importa imagem de perfil
+
 
 const Header = ({ scrollToSection, refs }) => {
-  // 3. Adiciona estado para controlar o menu mobile
+  //  Adiciona estado para controlar o menu mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Função para abrir/fechar o menu mobile
@@ -15,28 +17,42 @@ const Header = ({ scrollToSection, refs }) => {
   const handleNavClick = (ref) => (event) => {
     event.preventDefault();
     scrollToSection(ref);
-    // 6. Fecha o menu mobile ao clicar em um link
+    //  Fecha o menu mobile ao clicar em um link
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
   };
 
+  //Links das redes sociais no header
+    const githubUrl = "https://github.com/ResoluteJax";
+    const linkedinUrl = "https://www.linkedin.com/in/otavio-henrique-filgueiras-dos-santos-2746a120a/";
+
   return (
     <header className="main-header">
       <div className="logo-container">
-        <h1>Otávio Henrique</h1>
+        <img src={profilePic} alt="Otávio Henrique" className="profile-pic" />
+        <div className="tittle-subtitle-container">
+         <h1>Otávio Henrique</h1>
+         <div className='subtitle-line'>
+          <span>Desenvolvedor Jr. Fullstack</span>
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="social-icon">
+            <FaGithub />  
+          </a>
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="social-icon">
+            <FaLinkedin />  
+          </a>
+         </div>
+        </div>
       </div>
-
-      {/* 5. Adiciona classe condicional ao nav */}
-      {/* Removemos a classe 'main-nav' daqui se quisermos que ela só se aplique no desktop */}
-      {/* ou a mantemos e sobrescrevemos no mobile */}
+      
+      {/*  Links de Navegação */}
       <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <a href="#about" onClick={handleNavClick(refs.aboutRef)}>Sobre</a>
         <a href="#projects" onClick={handleNavClick(refs.projectsRef)}>Projetos</a>
         <a href="#contact" onClick={handleNavClick(refs.contactRef)}>Contato</a>
       </nav>
 
-      {/* 4. Botão de Toggle do Menu Mobile */}
+      {/*  Botão de Toggle do Menu Mobile */}
       <button className="menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </button>

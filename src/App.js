@@ -1,7 +1,10 @@
 import React, {useRef} from 'react';
 import Header from './components/Header/Header'; // Importa o componente Header
 import Footer from './components/Footer/Footer'; // Importa o componente Footer
+import Projects from './components/Projects/Projects'; // Importa o componente Projects
 import './assets/css/App.css';
+import "react-image-gallery/styles/css/image-gallery.css";
+
 
 
 function App() {
@@ -35,9 +38,9 @@ const scrollToSection = (ref) => {
       <div ref={aboutRef} id="about" style={{ height: '100vh', paddingTop: '80px', backgroundColor: 'lightblue' }}>
         <h2>Seção Sobre Mim (Placeholder)</h2>
       </div>
-      <div ref={projectsRef} id="projects" style={{ height: '100vh', paddingTop: '80px', backgroundColor: 'lightgreen' }}>
-        <h2>Seção Projetos (Placeholder)</h2>
-      </div>
+      
+      <Projects ref={projectsRef} />
+      
       <div ref={contactRef} id="contact" style={{ height: '100vh', paddingTop: '80px', backgroundColor: 'lightcoral' }}>
         <h2>Seção Contato (Placeholder)</h2>
       </div>

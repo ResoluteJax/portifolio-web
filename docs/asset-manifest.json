@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/portifolio-web/static/css/main.58062780.css",
-    "main.js": "/portifolio-web/static/js/main.7cb697c4.js",
+    "main.css": "/portifolio-web/static/css/main.2cee26d1.css",
+    "main.js": "/portifolio-web/static/js/main.c0fa40e8.js",
+    "static/media/proj1_img3.png": "/portifolio-web/static/media/proj1_img3.d5f30a62ce170da6aa4d.png",
+    "static/media/proj1_img2.png": "/portifolio-web/static/media/proj1_img2.11eb528b7752864cbf87.png",
+    "static/media/profile.jpg": "/portifolio-web/static/media/profile.b61f2a597f6282efac23.jpg",
+    "static/media/proj1_img1.png": "/portifolio-web/static/media/proj1_img1.6606e691923e3fc80419.png",
+    "static/media/proj3_img1.png": "/portifolio-web/static/media/proj3_img1.186299a9576717d24cec.png",
+    "static/media/proj3_img3.png": "/portifolio-web/static/media/proj3_img3.b63d879d67a69d9d35aa.png",
+    "static/media/proj3_img5.png": "/portifolio-web/static/media/proj3_img5.80e563eb0113fd34670a.png",
+    "static/media/proj2_img2.jpg": "/portifolio-web/static/media/proj2_img2.4dc18b6bafba4c824414.jpg",
+    "static/media/proj3_img4.png": "/portifolio-web/static/media/proj3_img4.52e7f5a9f5645d76c522.png",
+    "static/media/proj2_img1.png": "/portifolio-web/static/media/proj2_img1.8f9295dd5525b7428b68.png",
+    "static/media/proj3_img6.png": "/portifolio-web/static/media/proj3_img6.29f29d17763a529c8abb.png",
+    "static/media/proj3_img2.png": "/portifolio-web/static/media/proj3_img2.080126913094156b2240.png",
     "index.html": "/portifolio-web/index.html",
-    "main.58062780.css.map": "/portifolio-web/static/css/main.58062780.css.map",
-    "main.7cb697c4.js.map": "/portifolio-web/static/js/main.7cb697c4.js.map"
+    "main.2cee26d1.css.map": "/portifolio-web/static/css/main.2cee26d1.css.map",
+    "main.c0fa40e8.js.map": "/portifolio-web/static/js/main.c0fa40e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.58062780.css",
-    "static/js/main.7cb697c4.js"
+    "static/css/main.2cee26d1.css",
+    "static/js/main.c0fa40e8.js"
   ]
 }
