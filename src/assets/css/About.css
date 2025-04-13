@@ -1,0 +1,198 @@
+/* src/assets/css/About.css */
+.about-section {
+    padding: 80px 10%; /* Reduzir padding horizontal se necessário */
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Remover text-align: center; daqui */
+  }
+  
+  .about-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+  }
+  
+  /* Linha decorativa continua igual */
+  .about-section h2::after { 
+    content: ''; /* Essencial para pseudo-elementos */
+    display: block; /* Para que width/height/margin funcionem */
+    width: 60px; /* Largura da linha (ajuste se quiser) */
+    height: 4px; /* Espessura da linha (ajuste se quiser) */
+    background-color: #007bff; /* Mesma cor azul das outras seções */
+    margin: 10px auto 0; /* 10px de espaço acima, centralizado horizontalmente, 0 abaixo */
+
+    font-size: 2em;
+   }
+  
+  /* Container Flex para Imagem | Texto */
+  .about-content {
+    display: flex;
+    /* Alinha topo da imagem com topo do texto (ou use 'center') */
+    align-items: flex-start;
+    gap: 50px; /* Espaço entre imagem e texto */
+    width: 100%;
+    max-width: 1100px; /* Aumentar um pouco para comportar 2 colunas */
+    margin-top: 40px; /* Espaço abaixo do H2 */
+  }
+  
+
+  .about-profile-pic {
+    width: 100%; /* Faz a imagem preencher o container dela */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
+  
+  /* Container do Texto (Coluna Direita) */
+  .about-text-container {
+    flex: 1.5; /* Ocupa 1.5x o espaço da imagem (ajuste a proporção) */
+    /* Ou defina uma largura fixa/percentual: */
+    /* flex-basis: 55%; */
+  }
+  
+  .about-text-container p {
+    margin-bottom: 15px;
+    text-align: left; /* Alinha o texto à esquerda */
+    /* ou text-align: justify; */
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.05em; /* Pode ajustar */
+  }
+  
+  /* Placeholder das skills fica dentro do text-container */
+  .skills-placeholder {
+    /* Estilos existentes ou novos aqui */
+  }
+  
+  /* --- Estilos da Seção de Habilidades --- */
+  .skills-section{
+    margin-top: 40px; /* Espaço acima da seção de habilidades */
+    padding-top: 20px; /* Espaço interno */;
+    border-top: 1px solid #ddd;
+    width: 100%;
+  }
+
+.skills-section h3{
+    color: #333;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    text-align: center; /* Centraliza o título */
+}
+
+.skills-icons-container{
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px 30px; /* Espaço entre os ícones */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Ícone acima do texto */
+    align-items: center; /* Centraliza ícone e texto */
+    min-width: 80px; /* Largura mínima para cada item */
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+.skill-item:hover{
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+  
+}
+
+.skill-item svg{
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.skill-item span{
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+}
+
+
+.about-image-container {
+    flex: 1;
+    position: sticky;
+    align-self: flex-start;
+  
+    /* --- Altere este valor para aumentar o espaço --- */
+    /* Exemplo: Se header tem 75px, 105px deixa 30px de espaço */
+    top: 150px; /* Antes estava 90px (exemplo) */
+    
+  }
+
+  /* --- Responsividade (<= 600px) --- */
+  @media (max-width: 600px) { /* Ajuste este breakpoint se necessário, talvez 768px? */
+    .about-section {
+      padding: 60px 15px; /* Padding mobile */
+    }
+  
+    .about-content {
+      /* Volta para layout de coluna */
+      flex-direction: column;
+      align-items: center; /* Centraliza itens empilhados */
+      gap: 30px; /* Espaço vertical entre imagem e texto */
+    }
+  
+
+      /* Container da Imagem (Coluna Esquerda) */
+  .about-image-container {
+    flex-basis: auto;
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 20px;
+    position: static; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+    .about-text-container {
+       flex-basis: auto; /* Reseta base flex */
+       width: 100%; /* Texto ocupa toda a largura disponível */
+       text-align: center; /* Pode centralizar texto no mobile */
+    }
+  
+     .about-text-container p {
+         text-align: center; /* Ou left/justify se preferir */
+         font-size: 1em;
+     }
+  
+     .about-section h2 {
+       font-size: 2em;
+     }
+
+.skills-section h3{
+    font-size: 1.3em; /* Título menor no mobile */
+}
+
+.skills-icons-container{
+    gap: 15px 20px; /* Espaço reduzido entre ícones */
+}
+
+.skill-item svg{
+    font-size: 2.5em;
+}
+
+.skill-item span{
+    font-size: 0.8rem; /* Texto menor */
+}
+
+.about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  
+
+}
+  

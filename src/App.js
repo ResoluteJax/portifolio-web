@@ -2,52 +2,52 @@ import React, {useRef} from 'react';
 import Header from './components/Header/Header'; // Importa o componente Header
 import Footer from './components/Footer/Footer'; // Importa o componente Footer
 import Projects from './components/Projects/Projects'; // Importa o componente Projects
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import './assets/css/App.css';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 
 
 function App() {
-// 1. Criar referências para as seções
-const aboutRef = useRef(null);
-const projectsRef = useRef(null);
-const contactRef = useRef(null);
-// Adicione mais refs se tiver outras seções (ex: footerRef)
+  const aboutRef = useRef(null); // Ref já deve existir
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
-// 2. Criar a função de scroll
-const scrollToSection = (ref) => {
-  // Verifica se a referência existe e tem um elemento associado
-  if (ref.current) {
-    ref.current.scrollIntoView({
-      behavior: 'smooth', // Faz a rolagem ser suave
-      block: 'start',     // Alinha o topo da seção com o topo da viewport
-    });
-  } else {
-    console.warn("Tentativa de scroll para ref não existente:", ref);
-  }
-};
+  const scrollToSection = (ref) => {
+    // ... (código da função scrollToSection) ...
+    if (ref.current) {
+        ref.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    } else {
+        console.warn("Tentativa de scroll para ref não existente:", ref);
+    }
+  };
+
+  // Ajuste o valor de scroll-margin-top para a altura do seu header
+  const scrollMarginTopValue = '75px'; // Exemplo Desktop
+  const scrollMarginTopValueMobile = '65px'; // Exemplo Mobile
 
   return (
     <div className="App">
-    {/* 3. Passar a função e as refs como props para o Header */}
+    {/*  Passar a função e as refs como props para o Header */}
     <Header scrollToSection={scrollToSection} refs={{ aboutRef, projectsRef, contactRef }} />
 
     <main>
-      {/* 5. Marcar as seções com as refs */}
-      {/* Usaremos divs com altura e cores distintas para teste */}
-      <div ref={aboutRef} id="about" style={{ height: '100vh', paddingTop: '80px', backgroundColor: 'lightblue' }}>
-        <h2>Seção Sobre Mim (Placeholder)</h2>
-      </div>
-      
+      {/*  Marcar as seções com as refs */}
+            
+      {/* Componente About */}
+      <About ref={aboutRef} />
+
+      {/* Componente Project */}
       <Projects ref={projectsRef} />
+
+      {/* Componente Contact */}
+      <Contact ref={contactRef} />
       
-      <div ref={contactRef} id="contact" style={{ height: '100vh', paddingTop: '80px', backgroundColor: 'lightcoral' }}>
-        <h2>Seção Contato (Placeholder)</h2>
-      </div>
-      {/* Futuramente, substitua essas divs pelos seus componentes reais */}
-      {/* <div ref={aboutRef} id="about"><About /></div> */}
-      {/* <div ref={projectsRef} id="projects"><Projects /></div> */}
-      {/* <div ref={contactRef} id="contact"><Contact /></div> */}
+
     </main>
     <Footer /> {/* Adiciona o Footer */}
   </div>

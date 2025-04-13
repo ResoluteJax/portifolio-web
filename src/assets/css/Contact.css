@@ -1,0 +1,136 @@
+/* src/assets/css/Contact.css */
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f8f9fa; /* Cor de fundo similar ao About */
+    min-height: 80vh; /* Altura mínima */
+    display: flex; /* Usaremos flex para centralizar o conteúdo */
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px; /* Menor margem para o parágrafo intro */
+    color: #333;
+    position: relative;
+  }
+  
+  .contact-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+  }
+  
+  .contact-intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 600px; /* Limita largura do texto intro */
+  }
+  
+  .contact-form {
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 30px 40px; /* Padding desktop */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Espaço entre grupos de label/input */
+  }
+  
+  .form-group label {
+    display: block; /* Label acima do campo */
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que padding/border não aumentem a largura */
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Permite redimensionar só na vertical */
+    min-height: 120px; /* Altura mínima para textarea */
+  }
+  
+  .submit-button {
+    display: block; /* Botão em bloco */
+    width: 100%; /* Largura total */
+    padding: 12px 20px;
+    background-color: #28a745; /* Verde para sucesso/envio */
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaço acima do botão */
+  }
+  
+  .submit-button:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+  }
+
+/* Estilos para a mensagem de feedback */
+.form-feedback {
+  margin-top: 15px; /* Espaço acima da mensagem */
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.form-feedback.success {
+  background-color: #d4edda; /* Fundo verde claro */
+  color: #155724; /* Texto verde escuro */
+  border: 1px solid #c3e6cb;
+}
+
+.form-feedback.error {
+  background-color: #f8d7da; /* Fundo vermelho claro */
+  color: #721c24; /* Texto vermelho escuro */
+  border: 1px solid #f5c6cb;
+}
+
+
+  
+  /* --- Responsividade (<= 600px) --- */
+  @media (max-width: 600px) {
+    .contact-section {
+      padding: 60px 5%; /* Menos padding lateral */
+    }
+  
+     .contact-section h2 {
+       font-size: 2em; /* Título menor */
+     }
+  
+     .contact-intro {
+        font-size: 0.95em;
+        margin-bottom: 30px;
+     }
+  
+    .contact-form {
+      padding: 25px 20px; /* Menos padding no form */
+    }
+  
+    .submit-button {
+        font-size: 1em;
+    }
+  }

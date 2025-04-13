@@ -11,7 +11,7 @@ border-radius: 8px;
 
 .projects-section {
     padding: 50px 10%; /* Espaçamento similar ao About */
-    background-color: #fff; /* Fundo branco ou outra cor clara */
+    background-color: #f8f9fa;
     min-height: 100vh;
     
   }
@@ -68,7 +68,7 @@ border-radius: 8px;
   
   /* Estilo básico do card */
   .project-card {
-    background-color: #f8f9fa; /* Fundo do card */
+    background-color: #faf8f8; /* Fundo do card */
     border: 1px solid #e9ecef; /* Borda sutil */
     border-radius: 8px; /* Cantos arredondados */
     padding: 25px;
@@ -80,8 +80,10 @@ border-radius: 8px;
   .project-card h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #007bff; /* Cor do título do projeto */
+    color: #555; /* Cor do título do projeto */
     text-align: center;
+    font-size: 1.5em; /* Tamanho do título */
+    font-weight: 600; /* Peso do título */
   }
   
   .project-description {

@@ -80,17 +80,26 @@
 .main-nav {
   display: flex; /* Visível no desktop */
   gap: 20px;
+
+  
 }
 
 .main-nav a {
   color: white;
   text-decoration: none;
   font-size: 1.1em;
-  padding: 5px 0; /* Adiciona um pouco de área clicável */
+  padding: 5px 0;
+  /* 1. Adicionar para alinhar ícone e texto no desktop */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+
 }
 
 .main-nav a:hover {
   color: #61dafb;
+  font-display: flex;
+ 
 }
 
 /* --- Estilos do Botão de Toggle --- */
@@ -127,6 +136,10 @@
   .subtitle-line {
     font-size: 0.75em; /* Reduz subtítulo/ícones */
     gap: 6px; /* Reduz espaçamento dos ícones */
+    
+    flex-wrap: wrap;
+    font-size: 0.8em; /* Reduz subtítulo/ícones */
+    gap: 4px;
   }
 
   .social-icon-link {
@@ -162,11 +175,16 @@
 
   /* Estilo dos links dentro do menu mobile */
   .main-nav a {
-    padding: 15px 0; /* Mais área de clique */
-    width: 100%; /* Ocupa toda a largura */
-    text-align: center; /* Centraliza o texto */
-    border-bottom: 1px solid #444; /* Linha entre os links */
-    font-size: 1.2em; /* Fonte um pouco maior */
+    padding: 15px 0;
+    width: 100%;
+     border-bottom: 1px solid #444;
+    font-size: 1.2em;
+
+    
+    display: inline-flex; /* Ou só flex se o botão for display block */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente (ícone + texto) */
+    gap: 8px; /* Espaço ícone-texto */
   }
 
   .main-nav a:last-child {
