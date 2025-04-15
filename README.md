@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Portfólio Pessoal - Otávio Henrique
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-## Available Scripts
+Este é o repositório do meu portfólio pessoal, desenvolvido como uma Single Page Application (SPA) utilizando React. O objetivo é apresentar minhas habilidades, projetos concluídos e informações de contato para potenciais empregadores e colaboradores, visando uma oportunidade como Desenvolvedor Web Júnior.
 
-In the project directory, you can run:
+**✨ [Veja a versão online aqui!](https://resolutejax.github.io/portifolio-web/) ✨**
 
-### `npm start`
+*(Opcional: Adicione um screenshot da página principal aqui)*
+## 🚀 Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **React:** Biblioteca principal para construção da interface.
+* **CSS:** Estilização feita com módulos CSS externos para cada componente.
+* **Framer Motion:** Para animações de entrada e interações suaves.
+* **React Router DOM:** Utilizado para a estrutura base e manipulação de rotas/histórico (embora a navegação principal seja por scroll).
+* **React Icons:** Para inclusão de ícones SVG populares.
+* **EmailJS:** Para funcionalidade do formulário de contato sem necessidade de backend.
+* **React Image Gallery:** Para exibição das imagens na seção de projetos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌟 Funcionalidades Principais
 
-### `npm test`
+* **Single Page Application (SPA):** Navegação fluida em uma única página.
+* **Navegação Suave:** Links no header rolam suavemente para as seções correspondentes.
+* **Header Fixo e Responsivo:** Menu principal sempre acessível, com menu hambúrguer para telas menores (<= 600px).
+* **Seção Sobre Mim:** Apresentação pessoal com imagem "sticky" e seção de habilidades com ícones.
+* **Galeria de Projetos:** Exibição interativa de projetos com múltiplas imagens (`react-image-gallery`).
+* **Formulário de Contato Funcional:** Envio de mensagens diretamente para o email do proprietário via EmailJS com feedback visual.
+* **Design Responsivo:** Adaptado para visualização em dispositivos móveis (breakpoint principal em 600px).
+* **Animações:** Efeitos sutis de entrada e hover com Framer Motion.
+* **Download de Currículo:** Botão para baixar o CV em PDF diretamente da seção "Sobre Mim".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Como Executar Localmente
 
-### `npm run build`
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/ResoluteJax/portifolio-web.git](https://github.com/ResoluteJax/portifolio-web.git)
+    ```
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd portifolio-web
+    ```
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+    *ou*
+    ```bash
+    yarn install
+    ```
+4.  **Configure as Variáveis de Ambiente (EmailJS):**
+    * Crie um arquivo `.env` na raiz do projeto.
+    * Adicione suas credenciais do EmailJS (obtidas em [emailjs.com](https://www.emailjs.com/)):
+        ```
+        REACT_APP_EMAILJS_SERVICE_ID=SEU_SERVICE_ID
+        REACT_APP_EMAILJS_TEMPLATE_ID=SEU_TEMPLATE_ID
+        REACT_APP_EMAILJS_USER_ID=SEU_USER_ID
+        ```
+    * **Importante:** Adicione `.env` ao seu `.gitignore` se ainda não o fez.
+5.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm start
+    ```
+    *ou*
+    ```bash
+    yarn start
+    ```
+6.  Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📄 Deploy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este projeto está configurado para deploy manual no GitHub Pages a partir da pasta `/docs` no branch `master`. O processo envolve:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  Ajustar a chave `"homepage"` no `package.json`.
+2.  Configurar o script `build` no `package.json` para usar `BUILD_PATH=./docs`.
+3.  Rodar `npm run build`.
+4.  Fazer commit e push da pasta `/docs` atualizada para o branch principal.
+5.  Configurar o GitHub Pages para servir a partir de `/docs` no branch principal.
 
-### `npm run eject`
+## 🙏 Agradecimentos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Agradecimento especial à assistência da IA Gemini durante o desenvolvimento deste projeto, ajudando na solução de problemas e implementação de funcionalidades.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📫 Contato
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **LinkedIn:** Otávio Henrique ([https://www.linkedin.com/in/otáviohenriquedev/](https://www.linkedin.com/in/ot%C3%A1viohenriquedev/))
+* **Email:** otavio-henrique10@hotmail.com
+* **GitHub:** [@ResoluteJax](https://github.com/ResoluteJax)
